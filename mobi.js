@@ -1,13 +1,6 @@
 let Analytics = Mobi2Go.Analytics;
 let Events = Mobi2Go.Analytics.Events;
 
-// When a user clicks the 'Next step' button
-Analytics.bind({
-    EVENTS.STARTED_CHECKOUT: function() {
-        window.alert(_formatProducts());
-    }
-})
-
 // Identify Customer in Klaviyo
 Analytics.bind({
     IDENTIFY_CUSTOMER: function(customer) {
@@ -15,6 +8,28 @@ Analytics.bind({
           '$email': customer.email }]);
     }
 })
+
+// When a user clicks the 'Next step' button
+Mobi2Go.Analytics.bind({
+    EVENTS.STARTED_CHECKOUT: function() {
+        // Google tag manager
+        var ecommerce = {
+            checkout: {
+                actionField: {
+                    step: 1
+                },
+                products: [
+                    _formatProducts()
+                ]
+            }
+        };
+
+        _event('checkoutPaymentStep1', null, null, null, ecommerce);
+
+        // Generic analytic service (such as Google Analytics)
+        acme_tracker.track('start_checkout');
+    }
+});
 
 // Helpers
 function _formatProducts() {
