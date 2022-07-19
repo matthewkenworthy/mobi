@@ -2,6 +2,10 @@ let Analytics = Mobi2Go.Analytics;
 let Events = Mobi2Go.Analytics.EVENTS;
 let Order = Mobi2Go.Order;
 
+window.onload = function() {
+    window.alert("It works!");
+};
+
 // Identify Customer in Klaviyo
 Analytics.bind({
     IDENTIFY_CUSTOMER: function(customer) {
