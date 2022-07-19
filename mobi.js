@@ -33,7 +33,7 @@ function _formatProduct(product) {
     var product = {
         id: product.menu_product.id,
         name: product.menu_product.name,
-        lightspeed_id: parseInt(product.menu_product.plu),
+        lightspeed_id: parseInt(product.menu_product.plu) || parseInt(product.size.menu_modifier.plu),
         price: product.price.toFloat(),
         quantity: product.quantity,
         variant: product.size ? product.size.menu_modifier.name : null,
