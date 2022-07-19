@@ -12,6 +12,7 @@ Analytics.bind({
 Analytics.bind({
     EVENTS.STARTED_CHECKOUT: function() {
         window.alert(_formatProducts());
+    }
 });
 
 // Helper methods
