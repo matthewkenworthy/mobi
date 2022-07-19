@@ -39,6 +39,7 @@ function _formatProducts() {
 
     _.each(Order.getProducts(), function(product) {
         var product_to_track = _formatProduct(product);
+        product_to_track.location = Order.getLocation().name;
         products.push(product_to_track)
     });
 
@@ -53,7 +54,6 @@ function _formatProduct(product) {
         price: product.price.toFloat(),
         quantity: product.quantity,
         image_url: product.menu_product.image_src,
-        location: Order.getLocation().name,
         variant: product.size ? product.size.menu_modifier.name : null,
         category: product.menu_product.category
             ? product.menu_product.category.name
