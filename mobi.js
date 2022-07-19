@@ -8,6 +8,12 @@ Analytics.bind({
     }
 });
 
+// When a user clicks the 'Next step' button
+Analytics.bind({
+    EVENTS.STARTED_CHECKOUT: function() {
+        window.alert(_formatProducts());
+});
+
 // Helper methods
 function startSession() {
     window.dataLayer.appName = Mobi2Go.app.getPlatform();
