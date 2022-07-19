@@ -14,11 +14,3 @@ Analytics.bind({
         window.alert(_formatProducts());
     }
 });
-
-// Helper methods
-function startSession() {
-    window.dataLayer.appName = Mobi2Go.app.getPlatform();
-    window.dataLayer.appId = Mobi2Go.headoffice.domain_name + '-' + Mobi2Go.app.getPlatform();
-    window.dataLayer.currencyCode = Mobi2Go.headoffice.currency_abrv;
-}
-
