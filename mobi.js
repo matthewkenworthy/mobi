@@ -1,11 +1,15 @@
 let Analytics = Mobi2Go.Analytics;
-let Events = Mobi2Go.Analytics.Events;
 
+Mobi2Go.Analytics.bind({
+    IDENTIFY_CUSTOMER: function(customer) {
+        // Google tag manager
+        window.dataLayer.userId = customer.id;
+        _event('customer', 'set customer', 'set customer', customer.id);
 
-Analytics.bind({
-   IDENTIFY_CUSTOMER: function(customer) {
-       window.alert(`ID: ${customer.id}Email: ${customer.email}`);
-   }
+        // Identify in klaviyo
+       _learnq.push(['identify', {
+          '$email': customer.email }]);
+    }
 });
 
 // Helper methods
