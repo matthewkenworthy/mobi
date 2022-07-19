@@ -15,3 +15,15 @@ Analytics.bind({
         window.alert(_formatProducts());
     }
 });
+
+// Helpers
+function _formatProducts() {
+    var products = [];
+
+    _.each(Order.getProducts(), function(product) {
+        var product_to_track = _formatProduct(product);
+        products.push(product_to_track)
+    });
+
+    return products;
+}
