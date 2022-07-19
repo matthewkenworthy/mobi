@@ -11,7 +11,7 @@ Analytics.bind({
 
 // When a user clicks the 'Next step' button
 Analytics.bind({
-    Events.STARTED_CHECKOUT: function() {
+    STARTED_CHECKOUT: function() {
         window.alert(_formatProducts());
     }
 });
