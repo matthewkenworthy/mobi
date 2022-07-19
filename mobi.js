@@ -1,5 +1,6 @@
 let Analytics = Mobi2Go.Analytics;
 let Events = Mobi2Go.Analytics.EVENTS;
+let Order = Mobi2Go.Order;
 
 // Identify Customer in Klaviyo
 Analytics.bind({
@@ -12,7 +13,7 @@ Analytics.bind({
 // When a user clicks the 'Next step' button
 Analytics.bind({
     STARTED_CHECKOUT: function() {
-        window.alert(_formatProducts());
+        console.log(_formatProducts());
     }
 });
 
@@ -32,6 +33,7 @@ function _formatProduct(product) {
     var product = {
         id: product.menu_product.id,
         name: product.menu_product.name,
+        lightspeed_id: parseInt(product.menu_product.plu),
         price: product.price.toFloat(),
         quantity: product.quantity,
         variant: product.size ? product.size.menu_modifier.name : null,
