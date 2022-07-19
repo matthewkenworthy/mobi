@@ -1,4 +1,5 @@
 let Analytics = Mobi2Go.Analytics;
+let Events = Mobi2Go.Analytics.Events;
 
 // Identify Customer in Klaviyo
 Analytics.bind({
