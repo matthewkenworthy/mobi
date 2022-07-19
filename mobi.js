@@ -18,6 +18,14 @@ Analytics.bind({
 });
 
 // Helpers
+function _getProduct(mobi_id) {
+    return Mobi2Go.Menu.getProducts().collection.find( ({ id }) => id === parse_int(mobi_id) );
+}
+
+function _addProductToOrder(mobi_id) {
+    Order.addProduct(_getProduct(mobi_id));
+}
+
 function _formatProducts() {
     var products = [];
 
