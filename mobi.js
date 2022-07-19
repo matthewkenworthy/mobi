@@ -4,7 +4,7 @@ let Order = Mobi2Go.Order;
 let QueryString = Mobi2Go.helpers.getQueryStringAsObject()
 
 window.onload = function() {
-    _addProductToOrder(QueryString['add_product']); // 52256001
+    _addProductToOrder(QueryString['add_product']); // 5256001
 };
 
 // Identify Customer in Klaviyo
