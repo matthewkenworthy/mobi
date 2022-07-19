@@ -1,8 +1,8 @@
 let Analytics = Mobi2Go.Analytics;
 
-Mobi2Go.Analytics.bind({
+// Identify Customer in Klaviyo
+Analytics.bind({
     IDENTIFY_CUSTOMER: function(customer) {
-        // Identify in Klaviyo
        _learnq.push(['identify', {
           '$email': customer.email }]);
     }
