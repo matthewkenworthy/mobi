@@ -1,1 +1,1 @@
-window.alert("Boommmmm");
+window.alert("Boommmmm!");
