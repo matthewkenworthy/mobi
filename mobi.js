@@ -4,7 +4,7 @@ let Events = Mobi2Go.Analytics.Events;
 
 Analytics.bind({
    IDENTIFY_CUSTOMER: function(customer) {
-       window.alert(`ID: ${customer.id}Email: ${customer.email}`)
+       window.alert(`ID: ${customer.id}Email: ${customer.email}`);
    }
 });
 
