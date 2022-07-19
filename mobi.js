@@ -8,6 +8,9 @@ window.onload = function() {
     if(QueryString['add_product']) {
         _addProductToOrder(Sanitiser(QueryString['add_product'])); // 5256001
     }
+    if(QueryString['loc']) {
+        Order.setLocationById(Sanitiser(QueryString['loc']));
+    }
 };
 
 // Identify Customer in Klaviyo
