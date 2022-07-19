@@ -27,3 +27,21 @@ function _formatProducts() {
 
     return products;
 }
+
+function _formatProduct(product) {
+    var product = {
+        id: product.menu_product.id,
+        name: product.menu_product.name,
+        price: product.price.toFloat(),
+        quantity: product.quantity,
+        variant: product.size ? product.size.menu_modifier.name : null,
+        category: product.menu_product.category
+            ? product.menu_product.category.name
+            : null,
+        position: product.menu_product.category_list_position
+            ? product.menu_product.category_list_position
+            : null
+    };
+
+    return product;
+}
