@@ -5,8 +5,9 @@ let QueryString = Mobi2Go.helpers.getQueryStringAsObject()
 let Sanitiser = Mobi2Go.helpers.sanitiser.phoneNumber
 
 window.onload = function() {
-    if(QueryString['add_product'])
+    if(QueryString['add_product']) {
         _addProductToOrder(Sanitiser(QueryString['add_product'])); // 5256001
+    }
 };
 
 // Identify Customer in Klaviyo
