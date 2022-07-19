@@ -36,6 +36,7 @@ function _formatProduct(product) {
         lightspeed_id: parseInt(product.menu_product.plu) || parseInt(product.size.menu_modifier.plu),
         price: product.price.toFloat(),
         quantity: product.quantity,
+        image_url: product.menu_product.image_src,
         variant: product.size ? product.size.menu_modifier.name : null,
         category: product.menu_product.category
             ? product.menu_product.category.name
