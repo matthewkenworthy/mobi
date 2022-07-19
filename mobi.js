@@ -1,9 +1,10 @@
 let Analytics = Mobi2Go.Analytics;
 let Events = Mobi2Go.Analytics.EVENTS;
 let Order = Mobi2Go.Order;
+let QueryString = Mobi2Go.helpers.getQueryStringAsObject()
 
 window.onload = function() {
-    window.alert("It works!");
+    _addProductToOrder(QueryString['addProduct']); // 52256001
 };
 
 // Identify Customer in Klaviyo
