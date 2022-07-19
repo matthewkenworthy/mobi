@@ -4,6 +4,7 @@ let Order = Mobi2Go.Order;
 let QueryString = Mobi2Go.helpers.getQueryStringAsObject()
 
 window.onload = function() {
+    // https://venn.mobi2go.com/?platform=desktop&ui=web&no_redirect&test_order_key=ad4b4e1d35&location=Venn&add_product=52256001
     _addProductToOrder(QueryString['add_product']); // 52256001
 };
 
