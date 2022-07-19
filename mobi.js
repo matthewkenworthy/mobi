@@ -5,10 +5,10 @@ let QueryString = Mobi2Go.helpers.getQueryStringAsObject()
 let Sanitiser = Mobi2Go.helpers.sanitiser.phoneNumber
 
 window.onload = function() {
-    if(QueryString['add_product']) {
+    if(typeof QueryString['add_product'] !== "undefined") {
         _addProductToOrder(Sanitiser(QueryString['add_product'])); // 5256001
     }
-    if(QueryString['loc']) {
+    if(typeof QueryString['loc'] !== "undefined") {
         Order.setLocationById(Sanitiser(QueryString['loc']));
     }
 };
