@@ -7,14 +7,14 @@ Analytics.bind({
        _learnq.push(['identify', {
           '$email': customer.email }]);
     }
-});
+})
 
 // When a user clicks the 'Next step' button
 Analytics.bind({
     EVENTS.STARTED_CHECKOUT: function() {
         window.alert(_formatProducts());
     }
-});
+})
 
 // Helpers
 function _formatProducts() {
