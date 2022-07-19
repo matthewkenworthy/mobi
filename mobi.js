@@ -8,9 +8,6 @@ window.onload = function() {
     if(typeof QueryString['add_product'] !== "undefined") {
         _addProductToOrder(Sanitiser(QueryString['add_product'])); // 5256001
     }
-    if(typeof QueryString['loc'] !== "undefined") {
-        Order.setLocationById(Sanitiser(QueryString['loc']));
-    }
 };
 
 // Identify Customer in Klaviyo
@@ -56,6 +53,7 @@ function _formatProduct(product) {
         price: product.price.toFloat(),
         quantity: product.quantity,
         image_url: product.menu_product.image_src,
+        location: Order.getLocation().name,
         variant: product.size ? product.size.menu_modifier.name : null,
         category: product.menu_product.category
             ? product.menu_product.category.name
