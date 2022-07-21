@@ -36,6 +36,7 @@ Analytics.bind({
 Analytics.bind({
     STARTED_PAYMENT: function(order) {
         order.setMethodLabels({ "pickup" : "Pick Up By " + customer.name });
+        Order.setMethodLabels({ "pickup" : "P1ck Up By " + customer.name });
     }
 });
 
