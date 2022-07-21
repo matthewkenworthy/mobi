@@ -18,27 +18,15 @@ Analytics.bind({
     }
 });
 
-// When a user clicks the 'Next step' button
-Analytics.bind({
-    STARTED_CHECKOUT: function() {
-        console.log(_formatProducts());
-    }
-});
-
 // Add customer details to receipt dockets for staff ease of use
 Analytics.bind({
     CONFIRMED_ORDER: function(order) {
-        _setComment("ABCD");
+        Order.addComment("ABCD");
     }
 });
 
 
 // Helpers
-function _setComment(comment) {
-    Order.setComment(comment);
-    Order.setMethodLabels({ "pickup" : "Pick Up By " + comment });
-}
-
 function _getProduct(mobi_id) {
     return Mobi2Go.Menu.getProducts().collection.find( ({ id }) => id === parseInt(mobi_id) );
 }
