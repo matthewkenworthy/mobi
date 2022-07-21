@@ -6,7 +6,7 @@ let Sanitiser = Mobi2Go.helpers.sanitiser.phoneNumber
 
 window.onload = function() {
     if(typeof QueryString['add_product'] !== "undefined") {
-        _addProductToOrder(Sanitiser(QueryString['add_product'])); // 5256001
+        _addProductToOrder(Sanitiser(QueryString['add_product']));
     }
 };
 
@@ -22,6 +22,13 @@ Analytics.bind({
 Analytics.bind({
     STARTED_CHECKOUT: function() {
         console.log(_formatProducts());
+    }
+});
+
+// Add customer details to order
+Analytics.bind({
+    CONFIRMED_ORDER: function(order) {
+        Order.setComment("It Works!" + order.getComment());
     }
 });
 
