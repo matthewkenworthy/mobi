@@ -18,14 +18,6 @@ Analytics.bind({
     }
 });
 
-// Add customer details to receipt dockets for staff ease of use
-Analytics.bind({
-    CONFIRMED_ORDER: function(order) {
-        Order.addComment("ABCD");
-    }
-});
-
-
 // Helpers
 function _getProduct(mobi_id) {
     return Mobi2Go.Menu.getProducts().collection.find( ({ id }) => id === parseInt(mobi_id) );
