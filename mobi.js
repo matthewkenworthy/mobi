@@ -27,9 +27,15 @@ Analytics.bind({
 
 // Add customer details to receipt dockets for staff ease of use
 Analytics.bind({
-    STARTED_PAYMENT: function(order) {
+    CONFIRMED_ORDER: function(order) {
         order.setComment("It Works!" + order.getComment());
-        console.log("It triggers!");
+        console.log(order.getComment());
+    }
+});
+
+Analytics.bind({
+    STARTED_PAYMENT: function(order) {
+        order.setMethodLabels({ "pickup" : "Pick Up By " + customer.name });
     }
 });
 
