@@ -29,16 +29,13 @@ Analytics.bind({
 Analytics.bind({
     CONFIRMED_ORDER: function(order) {
         order.setComment("It Works!" + order.getComment());
-        console.log(order.getComment());
+        order.setMethodLabels({ "pickup" : "Pick Up By Dude" });
+        Order.setMethodLabels({ "pickup" : "Pick Up By Dudette" });
+        console.log("o: " + order.getComment());
+        console.log("O: " + Order.getComment());
     }
 });
 
-Analytics.bind({
-    STARTED_PAYMENT: function(order) {
-        order.setMethodLabels({ "pickup" : "Pick Up By Dude" });
-        Order.setMethodLabels({ "pickup" : "Pick Up By Dudette" });
-    }
-});
 
 // Helpers
 function _getProduct(mobi_id) {
