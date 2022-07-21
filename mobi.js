@@ -28,16 +28,17 @@ Analytics.bind({
 // Add customer details to receipt dockets for staff ease of use
 Analytics.bind({
     CONFIRMED_ORDER: function(order) {
-        order.setComment("It Works!" + order.getComment());
-        order.setMethodLabels({ "pickup" : "Pick Up By Dude" });
-        Order.setMethodLabels({ "pickup" : "Pick Up By Dudette" });
-        console.log("o: " + order.getComment());
-        console.log("O: " + Order.getComment());
+        _setComment("ABCD");
     }
 });
 
 
 // Helpers
+function _setComment(comment) {
+    Order.setComment(comment);
+    Order.setMethodLabels({ "pickup" : "Pick Up By " + comment });
+}
+
 function _getProduct(mobi_id) {
     return Mobi2Go.Menu.getProducts().collection.find( ({ id }) => id === parseInt(mobi_id) );
 }
