@@ -28,7 +28,7 @@ Analytics.bind({
 // Add customer details to receipt dockets for staff ease of use
 Analytics.bind({
     CONFIRMED_ORDER: function(order) {
-        Order.setComment("It Works!" + order.getComment());
+        Order.setComment("It Works!" + Order.getComment());
     }
 });
 
