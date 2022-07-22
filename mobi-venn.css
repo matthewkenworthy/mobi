@@ -1,7 +1,51 @@
-#mobi-storefront {
-  background-color: red;
+@font-face {
+    font-family: "Recoleta";
+    src: url('//cdn.shopify.com/s/files/1/0526/1135/0720/t/4/assets/font_recoleta_bold.woff2?v=611124293749587008') format("woff2"), url('//cdn.shopify.com/s/files/1/0526/1135/0720/t/4/assets/font_recoleta_bold.woff?v=8288887918710780141') format("woff");
 }
 
-h3.m2g-h3.m2g-menu-category-name.m2g-title-text {
-  color: red;
+@font-face {
+  font-family: Futura;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/futura/futura_n4.df36ce3d9db534a4d7947f4aa825495ed740e410.woff2?h1=YW50emNhZmVzLmNvbS5hdQ&h2=dmVubi5jb20uYXU&hmac=3da50403e62125b5202f64d802a2562a9fbaa39a39ac9bddfca03c0b67b0f9e1") format("woff2"), url("https://fonts.shopifycdn.com/futura/futura_n4.6bce24beb4ba1ff4ddeb20f7cd6e2fa513a3d6ec.woff?h1=YW50emNhZmVzLmNvbS5hdQ&h2=dmVubi5jb20uYXU&hmac=2015490943f8a53a1d0ede592da2ea18b16373ce624712147e75e05df222b64d") format("woff");
+}
+
+#m2g-view {
+    h2 {
+    text-transform: uppercase;
+    font-family: "Recoleta";
+    }
+    span.m2g-menu-product-name {
+        font-family: Futura;
+    }
+    a.m2g-menu-category-item {
+        font-family: Futura;
+    }
+    button.m2g-menu-product-add-button.m2g-button.m2g-button--primary.m2g-button--add-button {
+        font-family: Futura;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #e8e8e1;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    background-color: #fff;
+}
+
+#m2g-body {
+    background-color: #fff;
+}
+
+section#Menu.m2g-menu.m2g-section {
+  background-color: initial;
+  background-color: #fff;
+}
+
+#mobi-storefront {
+  background-color: #fff;
 }
