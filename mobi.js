@@ -15,8 +15,11 @@ Analytics.bind({
     IDENTIFY_CUSTOMER: function(customer) {
        _learnq.push(['identify', {
           '$email': customer.email }]);
+        Order.setComment("Testing");
     }
 });
+
+
 
 // Helpers
 function _getProduct(mobi_id) {
