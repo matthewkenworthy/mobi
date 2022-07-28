@@ -49,3 +49,8 @@ section#Menu.m2g-menu.m2g-section {
 #mobi-storefront {
   background-color: #fff;
 }
+
+#m2g-page div.m2g-list-cell__content.m2g-list-cell__content--right-icon {
+  background-color: #FF0000;
+}
+
