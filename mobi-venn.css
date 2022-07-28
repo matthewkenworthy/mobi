@@ -13,7 +13,8 @@
 
 #m2g-view {
     h2 {
-    text-transform: uppercase;
+    text-transform: lowercase;
+    color: red;
     font-family: "Recoleta";
     }
     span.m2g-menu-product-name {
